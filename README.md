@@ -1,108 +1,72 @@
-# flowza
+Flowza – Time Management & Productivity Platform
 
-flowza is a full-stack MERN productivity application for task planning, focus sessions, habit tracking, time reports, and analytics.
+Flowza is a full-stack productivity and time-management web application designed to help users organize tasks, build habits, manage focus sessions, and track productivity.
 
-## Stack
+Live Demo
 
-- React, React Router, Redux Toolkit, React Query, Axios, Tailwind CSS, Recharts
-- Node.js, Express.js, MongoDB Atlas, Mongoose
-- JWT access tokens, refresh tokens, bcrypt password hashing
+[Open Flowza](https://flowza-one.vercel.app)
 
-## Quick Start
+Features
 
-```bash
-npm run install:all
-cp backend/.env.example backend/.env
-cp frontend/.env.example frontend/.env
-npm run dev
-```
+- User registration and login
+- Task creation and management
+- Kanban-style task organization
+- Task updating and deletion
+- Habit tracking
+- Focus/Pomodoro timer
+- Productivity analytics
+- Calendar-based organization
+- User profile management
+- Protected routes and authentication
 
-Frontend: `http://localhost:5173`
+Tech Stack
 
-Backend: `http://localhost:5000`
+Frontend
 
-## Environment
+- React
+- Vite
+- Redux Toolkit
+- Tailwind CSS
+- Axios
 
-Backend variables live in `backend/.env`.
+Backend
 
-```bash
-NODE_ENV=development
-PORT=5000
-CLIENT_URL=http://localhost:5173
-MONGODB_URI=mongodb+srv://USER:PASSWORD@cluster.mongodb.net/focusflow
-MONGODB_SERVER_SELECTION_TIMEOUT_MS=5000
-JWT_ACCESS_SECRET=replace_with_long_random_secret
-JWT_REFRESH_SECRET=replace_with_another_long_random_secret
-ACCESS_TOKEN_TTL=15m
-REFRESH_TOKEN_TTL=7d
-COOKIE_SECRET=replace_cookie_secret
-SMTP_HOST=
-SMTP_PORT=
-SMTP_USER=
-SMTP_PASS=
-SMTP_FROM=flowza <noreply@flowza.app>
-```
+- Node.js
+- Express.js
+- MongoDB
+- Mongoose
+- JWT Authentication
 
-Frontend variables live in `frontend/.env`.
+Deployment
 
-For local development, `MONGODB_URI=mongodb://127.0.0.1:27017/focusflow` requires MongoDB to be installed and running on your machine. If you are using MongoDB Atlas, replace `MONGODB_URI` in `backend/.env` with your Atlas connection string.
+- Vercel – Frontend
+- Render – Backend
+- MongoDB Atlas – Database
 
-```bash
-VITE_API_URL=http://localhost:5000/api
-```
+Architecture
 
-## Deployment
+Flowza follows a full-stack architecture:
 
-### Backend on Render or Railway
+React Frontend → Express/Node.js API → MongoDB Database
 
-1. Create a MongoDB Atlas cluster and copy its connection string.
-2. Deploy the `backend` folder as a Node service.
-3. Set the environment variables from `backend/.env.example`.
-4. Set `CLIENT_URL` to the deployed Vercel URL.
-5. Use `npm install` as the build command and `npm start` as the start command.
+The frontend communicates with the backend through REST APIs, while MongoDB Atlas stores application data.
 
-### Frontend on Vercel
+Purpose
 
-1. Import the repository in Vercel.
-2. Set the root directory to `frontend`.
-3. Set `VITE_API_URL` to `https://your-api-host.com/api`.
-4. Use `npm run build` and deploy the generated `dist` folder.
+Flowza was developed as a full-stack project to apply concepts including:
 
-## API
+- Frontend development
+- REST API development
+- Database integration
+- Authentication and authorization
+- State management
+- CRUD operations
+- Cloud deployment
 
-Auth:
+Future Improvements
 
-- `POST /api/auth/register`
-- `POST /api/auth/login`
-- `POST /api/auth/refresh`
-- `POST /api/auth/logout`
-- `GET /api/auth/me`
-- `PUT /api/auth/profile`
-
-Tasks:
-
-- `GET /api/tasks`
-- `GET /api/tasks/:id`
-- `POST /api/tasks`
-- `PUT /api/tasks/:id`
-- `DELETE /api/tasks/:id`
-- `POST /api/tasks/:id/duplicate`
-
-Habits:
-
-- `GET /api/habits`
-- `POST /api/habits`
-- `PUT /api/habits/:id`
-- `DELETE /api/habits/:id`
-- `POST /api/habits/:id/complete`
-
-Timer:
-
-- `POST /api/timer/start`
-- `POST /api/timer/stop`
-- `POST /api/timer/manual`
-- `GET /api/timer/report`
-
-Analytics:
-
-- `GET /api/analytics/summary`
+- Audio notifications when focus sessions or breaks begin and end
+- More detailed productivity reports
+- Improved calendar integration
+- Additional customization options
+- Mobile application support
