@@ -70,3 +70,17 @@ Future Improvements
 - Improved calendar integration
 - Additional customization options
 - Mobile application support
+
+Screenshots
+
+Login
+![Flowza Login](login.png)
+
+Dashboard
+![Flowza Dashboard](dashboard.png)
+
+Kanban Board
+![Flowza Kanban Board](kanban.png)
+
+Pomodoro Timer
+![Flowza Pomodoro Timer](pomodoro.png)
